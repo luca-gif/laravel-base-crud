@@ -9,7 +9,7 @@
                     @foreach ($comics as $comic)
                         <div class="col-4 card">
                             <img src="{{ $comic->image }}" alt="">
-                            <li>{{ $comic->name }}</li>
+                            <li>{{ $comic->title }}</li>
                             <li>{{ $comic->type }}</li>
                         </div>
                     @endforeach

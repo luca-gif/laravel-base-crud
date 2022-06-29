@@ -48,7 +48,7 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        //
+        dd($id);
     }
 
     /**

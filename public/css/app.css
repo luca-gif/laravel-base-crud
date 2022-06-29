@@ -51,3 +51,7 @@ main img {
   margin-bottom: 10px;
 }
 
+main .text {
+  height: 100px;
+}
+

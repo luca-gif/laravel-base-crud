@@ -15,6 +15,12 @@
                             </div>
                             <a class="btn btn-danger" href="{{ route('comics.show', $comic) }}">Show</a>
                             <a class="btn btn-success my-2" href="{{ route('comics.edit', $comic) }}">Edit</a>
+                            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-primary" type="submit">Delete</button>
+                            </form>
+
                         </div>
                     @endforeach
                 </div>

@@ -5,6 +5,7 @@
         </li>
         <li><a class="{{ Route::currentRouteName() === 'index.index' ? 'active' : '' }}"
                 href="{{ route('index.index') }}">Comics</a></li>
+
     </ul>
 
 </header>

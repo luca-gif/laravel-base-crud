@@ -13,7 +13,8 @@
                                 <li>{{ $comic->title }}</li>
                                 <li>{{ $comic->type }}</li>
                             </div>
-                            <a class="btn btn-danger" href="{{ route('index.show', $comic) }}">Show</a>
+                            <a class="btn btn-danger" href="{{ route('comics.show', $comic) }}">Show</a>
+                            <a class="btn btn-success my-2" href="{{ route('comics.edit', $comic) }}">Edit</a>
                         </div>
                     @endforeach
                 </div>

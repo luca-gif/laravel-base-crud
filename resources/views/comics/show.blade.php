@@ -7,8 +7,8 @@
         <p>Type: {{ $comics->type }}</p>
 
         <div class="d-inline-block">
-            <a class="btn btn-dark my-2" href="{{ route('index.index') }}">Back</a>
-            <a class="btn btn-success my-2" href="{{ route('index.edit', $comics) }}">Edit</a>
+            <a class="btn btn-dark my-2" href="{{ route('comics.index') }}">Back</a>
+
         </div>
     </div>
 @endsection

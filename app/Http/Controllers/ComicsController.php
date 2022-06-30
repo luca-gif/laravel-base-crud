@@ -58,9 +58,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($comic)
     {
-        return view('comics.edit');
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -70,11 +70,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        dump($request);
 
-        return view('comics.update');
+
+        return redirect()->route('comics.index');
     }
 
     /**

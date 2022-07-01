@@ -8,7 +8,7 @@
                 <div class="row">
                     @foreach ($comics as $comic)
                         <div class="col-4 card">
-                            <img src="{{ $comic->image }}" alt="">
+                            <img src="{{ $comic->image }}" alt="{{ $comic->title }}">
                             <div class="text">
                                 <li>{{ $comic->title }}</li>
                                 <li>{{ $comic->type }}</li>
@@ -18,7 +18,7 @@
                             <form action="{{ route('comics.destroy', $comic) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-primary" type="submit">Delete</button>
+                                <button class="btn btn-dark w-100" type="submit">Delete</button>
                             </form>
 
                         </div>

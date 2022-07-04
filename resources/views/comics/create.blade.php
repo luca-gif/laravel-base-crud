@@ -12,7 +12,7 @@
                         <input type="text" class="form-control @error('title') is-invalid @enderror"
                             value="{{ old('title') }}" name="title" id="title" placeholder="Insert title">
                         @error('title')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
 
                     </div>
@@ -21,7 +21,7 @@
                         <input type="text" class="form-control @error('type') is-invalid @enderror"
                             value="{{ old('type') }}" name="type" id="type" placeholder="Insert type">
                         @error('type')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -30,7 +30,7 @@
                         <input type="text" class="form-control @error('image') is-invalid @enderror"
                             value="{{ old('image') }}" name="image" id="image" placeholder="Insert image">
                         @error('image')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
                     </div>
 

@@ -15,7 +15,7 @@
                             class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                             placeholder="Title">
                         @error('title')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
 
                     </div>
@@ -25,7 +25,7 @@
                             class="form-control @error('type') is-invalid @enderror" name="type" id="type"
                             placeholder="Type">
                         @error('type')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -35,7 +35,7 @@
                             class="form-control @error('image') is-invalid @enderror" name="image" id="image"
                             placeholder="Image">
                         @error('image')
-                            {{ $message }}
+                            <p class="alert alert-danger">{{ $message }}</p>
                         @enderror
                     </div>
 

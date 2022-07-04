@@ -37,6 +37,28 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate(
+            [
+
+                'title' => 'required|min:3|max:255',
+                'type' => 'required|min:3|max:255',
+                'image' => 'required|unique:comics|max:255'
+            ],
+            [
+                'title.required' => 'Inserisci il titolo',
+                'title.min' => 'La lunghezza deve essere superiore a :min',
+                'title.max' => 'La lunghezza deve essere inferiore a :max',
+                'type.required' => 'Inserisci il tipo',
+                'type.min' => 'La lunghezza deve essere superiore a :min',
+                'type.max' => 'La lunghezza deve essere inferiore a :max',
+                'image.required' => "Inserisci l'immagine",
+                'image.unique' => "Questa immagine è già presente",
+                'image.max' => 'La lunghezza deve essere inferiore a :max',
+
+            ]
+        );
+
         $data = $request->all();
         $new_comic = new Comic();
         $new_comic->fill($data);

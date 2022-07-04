@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Comic;
-
 use Illuminate\Http\Request;
+use App\Http\Requests\ComicsRequest;
+
 
 class ComicsController extends Controller
 {
@@ -35,29 +36,8 @@ class ComicsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicsRequest $request)
     {
-
-        $request->validate(
-            [
-
-                'title' => 'required|min:3|max:255',
-                'type' => 'required|min:3|max:255',
-                'image' => 'required|unique:comics|max:255'
-            ],
-            [
-                'title.required' => 'Inserisci il titolo',
-                'title.min' => 'La lunghezza deve essere superiore a :min',
-                'title.max' => 'La lunghezza deve essere inferiore a :max',
-                'type.required' => 'Inserisci il tipo',
-                'type.min' => 'La lunghezza deve essere superiore a :min',
-                'type.max' => 'La lunghezza deve essere inferiore a :max',
-                'image.required' => "Inserisci l'immagine",
-                'image.unique' => "Questa immagine è già presente",
-                'image.max' => 'La lunghezza deve essere inferiore a :max',
-
-            ]
-        );
 
         $data = $request->all();
         $new_comic = new Comic();
@@ -98,7 +78,7 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicsRequest $request, Comic $comic)
     {
 
         $data = $request->all();
